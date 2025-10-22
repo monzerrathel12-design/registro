@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #4c7b8a;
+    --secondary-color: #9cb5be;
+    --background-color: #c5ddec;
+    --text-color: #243241;
+    --border-color: #2a3849;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgb(179, 213, 235);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(30, 58, 77, 0.884);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: rgb(9, 66, 63);
+    font-family: monospace;
+    @media screen and (min-width: 400px) {
+        color: rgb(26, 66, 158);
+        font-family: 'Courier New', Courier, monospace; 
+        
+    }
+}
+
+
+.g {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.acciones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #e2e8f0;
+    color: var(--text-color);
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+        background-color: #212e3d;
+    }
+
+    form {
+        padding: 1.5rem;
+        ;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+}
